@@ -1,0 +1,33 @@
+<div class="lds-circle" *ngIf="spinner"><div></div></div>
+<h1>{{'title'|translate}}</h1>
+<h5>{{'welcome'|translate}}</h5>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Date Naissance</th>
+            <th>Nationnalité</th>
+            <th>Région</th>
+            <th>Identité</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td><input class="form-control" placeholder="email" [(ngModel)]="searchItem"></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users |search:searchItem">
+            <td>{{user.id}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.date_naiss}}</td>
+            <td>{{user.nationalite}}</td>
+            <td>{{user.region}}</td>
+            <td>{{user.identite}}</td>
+            <td>
+                <i class="fa fa-pencil-square-o" aria-hidden="true" (click)="edit(user)"></i>
+                <i class="fa fa-times" aria-hidden="true" (click)="delete(user)"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>

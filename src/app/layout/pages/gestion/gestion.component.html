@@ -1,0 +1,41 @@
+<h1>Modifier l'utilisateur {{user.id}}</h1>
+<div class="form-group">
+    <label>Email</label>
+    <input class="form-control" [(ngModel)]="user.email"/>
+</div>
+<div class="form-group">
+    <label>Phone</label>
+    <input class="form-control" [(ngModel)]="user.phone"/>
+</div>
+<div class="form-group">
+    <label>Date naissance</label>
+    <input class="form-control" type="date" [(ngModel)]="user.date_naiss"/>
+</div>
+<div class="form-group">
+    <label>Nationnalitée</label>
+    <select class="form-control" [(ngModel)]="user.nationalite">
+        <option *ngFor="let na of nationnalte" [value]="na.title">{{na.title}}</option>
+    </select>
+</div>
+<div class="form-group" *ngIf='user.nationalite!=undefined && user.nationalite!=""'>
+    <label>Region</label>
+    <select *ngIf="user.nationalite == 'Tunisie'" class="form-control" [(ngModel)]="user.region">
+        <option *ngFor="let tn of nationnalte[0].region" [value]="tn">{{tn}}</option>
+
+    </select>
+    <select *ngIf="user.nationalite == 'France'" class="form-control" [(ngModel)]="user.region">
+        <option *ngFor="let tn of nationnalte[1].region" [value]="tn">{{tn}}</option>
+
+    </select>
+    <select *ngIf="user.nationalite == 'Espagne'" class="form-control" [(ngModel)]="user.region">
+        <option *ngFor="let tn of nationnalte[2].region" [value]="tn">{{tn}}</option>
+
+    </select>
+</div>
+<div class="form-group">
+    <label *ngIf="user.nationalite == 'Tunisie'">Identité (CIN)</label>
+    <label *ngIf="user.nationalite != 'Tunisie'">Identité (passeport)</label>
+    <input class="form-control"  [(ngModel)]="user.identite"/>
+</div>
+
+<button class="btn btn-info" (click)="update()">Update User</button>

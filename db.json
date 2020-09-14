@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "email": "jamel14@libe.fe",
+      "phone": "ljlsjd",
+      "date_naiss": "2021-02-02",
+      "nationalite": "Tunisie",
+      "region": "Nabeul",
+      "identite": "54584558555",
+      "id": 5
+    },
+    {
+      "email": "تاعيلتسه",
+      "phone": "2541",
+      "date_naiss": "2021-02-02",
+      "nationalite": "France",
+      "region": "Paris",
+      "identite": "21454215",
+      "id": 6
+    },
+    {
+      "email": "ezeze",
+      "phone": "zeezeze",
+      "date_naiss": "2020-02-11",
+      "nationalite": "France",
+      "identite": "zezeze",
+      "id": 7
+    },
+    {
+      "email": "ezeze",
+      "phone": "zeezeze",
+      "date_naiss": "2020-02-11",
+      "nationalite": "France",
+      "identite": "zezeze",
+      "id": 8
+    },
+    {
+      "email": "ezeze",
+      "phone": "zeezeze",
+      "date_naiss": "2020-02-11",
+      "nationalite": "France",
+      "identite": "zezeze",
+      "id": 9
+    }
+  ]
+}
