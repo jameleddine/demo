@@ -24,7 +24,7 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <select #langSelect (change)="translate.use(langSelect.value)">
+        <select #langSelect (change)="translate.use(langSelect.value)" class="form-control">
           <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
         </select>
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
